@@ -9,7 +9,7 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['OUTPUT_FOLDER'] = 'static/processed'
 
-aai.settings.api_key = "a00b1c97b4d14896ab21f61deb6d25bd"
+aai.settings.api_key = "API_KEY"
 
 def extract_audio(video_path, audio_output="extracted_audio.mp3"):
     command = ["ffmpeg", "-i", video_path, "-q:a", "0", "-map", "a", audio_output, "-y"]
